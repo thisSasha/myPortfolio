@@ -1,6 +1,6 @@
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    link.onclick = function(e) {
+    link.onclick = function (e) {
         e.preventDefault();
 
         let href = this.getAttribute('href').substring(1);

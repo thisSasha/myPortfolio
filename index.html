@@ -7,13 +7,14 @@
     </style>
     <link rel="stylesheet" href="./css/zero.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
 </head>
 
-<body>
+<>
     <ul class="nav">
         <li><a href="#skills">⠀Мои навыки⠀</a></li>
         <hr class="wall">
@@ -27,11 +28,12 @@
     </ul>
     <div class="main">
         <h1>Портфолио</h1>
-        <p class="h1">Меня зовут Александр. Я готов сделать сайт. Чтобы заказать сайт нажмите "Заказать сайт"</p>
+        <p class="h1">Меня зовут Александр. Сделаю сайт-визитку, сайт опрос и др.</p>
     </div>
     <div id="skills">
         <h2>Навыки</h2>
-        <p> Делаю сайты. Имею знания js, css, html. Создавал свои модули javaScript. На данный момент по-тихоньку изучаю фреймворк
+        <p> Web-разработчик(Имею знания js, css, html). Создавал свои модули JavaScript. На данный момент по-тихоньку
+            изучаю фреймворк
             React. <br><br> Я начинающий, но талантливый кодер. И поэтому я могу лёгкий проект сделать бесплатно, а
             сложный за низкую стоимость. <br><br> Также т.к. я начинающий кодер у меня много желания работать и узнавать
             новое.</p>
@@ -39,7 +41,24 @@
     <hr class="hr">
     <div id="projects">
         <h2>Проекты</h2>
-        
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a href="https://thissasha.github.io/randomRace" target="_blank">
+                        <img src="./res/randRace.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </div>
 
 
@@ -53,9 +72,30 @@
             <label for="type" id="typeSite">Тип +</label>   
             
     </form> -->
-    </div>
-    <script src="./js/remoteSlider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            slidesPerView:4,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        setInterval(() => {
+            swiper.slideNext(400)
+        }, 5000);
+    </script>
     <script src="./js/mainScript.js"></script>
-</body>
+    </body>
 
 </html>
