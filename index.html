@@ -1,101 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='ru'>
 
 <head>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;700&display=swap');
     </style>
-    <link rel="stylesheet" href="./css/zero.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
+    <link rel='stylesheet' href='./css/zero.css'>
+    <link rel='stylesheet' href='./css/style.css'>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Фрилансер Александр</title>
 </head>
 
-<>
-    <ul class="nav">
-        <li><a href="#skills">⠀Мои навыки⠀</a></li>
-        <hr class="wall">
-        <li><a href="#projects">⠀Проекты⠀</a></li>
-        <hr class="wall">
-        <li><a href="#comunication">⠀Соц. сети⠀</a></li>
-        <hr class="wall">
-        <li><a href="#orderSite">⠀Заказать сайт⠀</a></li>
-        <hr class="wall">
-        <li><a href="#comunication">⠀Задать вопрос⠀</a></li>
-    </ul>
-    <div class="main">
-        <h1>Портфолио</h1>
-        <p class="h1">Меня зовут Александр. Сделаю сайт-визитку, сайт опрос и др.</p>
-    </div>
-    <div id="skills">
-        <h2>Навыки</h2>
-        <p> Web-разработчик(Имею знания js, css, html). Создавал свои модули JavaScript. На данный момент по-тихоньку
-            изучаю фреймворк
-            React. <br><br> Я начинающий, но талантливый кодер. И поэтому я могу лёгкий проект сделать бесплатно, а
-            сложный за низкую стоимость. <br><br> Также т.к. я начинающий кодер у меня много желания работать и узнавать
-            новое.</p>
-    </div>
-    <hr class="hr">
-    <div id="projects">
-        <h2>Проекты</h2>
-        <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <a href="https://thissasha.github.io/randomRace" target="_blank">
-                        <img src="./res/randRace.png" alt="">
-                    </a>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav__elements">
+                <a href="" class="nav__logo">
+                    <img src="./res/logo.png" alt="">
+                </a>
+                <ul class="nav__links">
+                    <li><a href="">Обо мне</a></li>
+                    <li><a href="">Навыки</a></li>
+                    <li><a href="">Проекты</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+                <div class="nav__social">
+                    <a href=""><img src="./res/whatsapp.png" alt="" class="icon"></a>
+                    <a href=""><img src="./res/telega.png" alt="" class="icon"></a>
+                    <a href=""><img src="./res/vk.png" alt="" class="icon"></a>
                 </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-    </div>
-
-
-
-
-
-
-    <!-- <div id="orderSite">
-        <form action="">
-            <h2>Заказать сайт</h2>
-            <label for="type" id="typeSite">Тип +</label>   
-            
-    </form> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            slidesPerView:4,
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-        setInterval(() => {
-            swiper.slideNext(400)
-        }, 5000);
-    </script>
-    <script src="./js/mainScript.js"></script>
-    </body>
+    </nav>
+    <header>
+        
+    </header>
+    <script src='./js/mainScript.js'></script>
+</body>
 
 </html>
