@@ -31,10 +31,41 @@ body {
 .swiper-slide img {
     border: 0.4vw solid white;
     position: relative;
-    top: 20%;
+    top: 20vh;
     width: 12.63vw;
     height: 17vh;
 }
 nav{
     position: fixed;
+    width: 100vw;
+    top: 0;
+    background-color: rgb(35, 35, 35);
+}
+.container{
+    position: relative;
+    padding: 0.5%;
+    margin: auto;
+    max-width: 1200px;
+    height: 100%;
+}
+.nav__elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: inline-flex;
+    gap: 8vw;
+    align-items: center;
+}
+nav a{
+    display: inline-block;
+    color: rgba(222, 222, 222, 0.929);
+    font-size: 2.2em;
+}
+nav li:hover{
+    border: 1px solid white;
+}
+.icon{
+    width: 4vw;
 }
