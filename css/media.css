@@ -46,14 +46,27 @@
         gap: 40px;
     }
 
-    .about .elements, .scills .elements{
+    .about .elements, .scills .elements, .contacts ul{
         flex-direction: column;
         gap: 40px;
         justify-content: center;
     }
+    .contacts ul{
+        gap: 30px;
+        margin: auto;
+    }
+    section .foto{
+        display: none;
+    }
+    hr.sectionWall{
+        display: block;
+    }
 
     .nav__social i {
         font-size: 4em;
+    }
+    .icon, .contacts i{
+        font-size: 2em;
     }
 
     .nav__social {

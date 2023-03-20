@@ -268,3 +268,36 @@ section .info .text {
 .scills .elements{
     flex-direction: row-reverse;
 }
+
+hr.sectionWall{
+    display: none;
+    height: 0.3vh;
+    background-color: white;
+    width: 90vw;
+    margin: auto;
+}
+hr{
+    height: 0.3vh;
+    width: 90vw;
+    margin: auto;
+    background-color: white;
+}
+.contacts h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contacts .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contacts ul{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+i, .icon{
+    font-size: 1em;
+    width: 1em;
+}
