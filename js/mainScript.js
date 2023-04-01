@@ -7,6 +7,7 @@ document.querySelectorAll('a[href^="#N"]').forEach(link => {
         e.preventDefault();
         let href = this.getAttribute('href').substring(2);
         const scrollTarget = document.querySelector(href);
+        console.log(document.querySelector(href));
         const topOffset = 0;
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
@@ -24,8 +25,7 @@ document.querySelector('.nav__gamburger').onclick = function() {
 
 
 let exp = new Date().getFullYear()-2021;
-document.querySelector('#exp').innerHTML = exp;
+// document.querySelector('#exp').innerHTML = exp;
 
 let age = new Date().getFullYear()-2012;
 document.querySelector('#age').innerHTML = age;
-

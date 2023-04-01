@@ -40,13 +40,18 @@
     .header__info {
         text-align: center;
     }
-
+    .scills__card{
+        width: 80vw;
+        height: 60vw;
+    }
     .header__elements {
         flex-direction: column-reverse;
         gap: 40px;
     }
-
-    .about .elements, .scills .elements, .contacts ul{
+    .container{
+        padding: 0 16px;
+    }
+    section .elements, .contacts ul{
         flex-direction: column;
         gap: 40px;
         justify-content: center;
