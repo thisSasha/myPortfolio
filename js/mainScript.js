@@ -29,8 +29,12 @@ let exp = new Date().getFullYear() - 2021;
 
 let age = new Date().getFullYear() - 2012;
 document.querySelector('#age').innerHTML = age;
+let slides = 3;
+if(window.matchMedia('(max-width: 768px)')){
+    slides = 1;
+};
 
-const swiper = new Swiper('.swiper', {
+let swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -40,7 +44,7 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
     },
     effect: 'coverflow',
-    slidesPerView: 3,
+    slidesPerView: slides,
 
     // Navigation arrows
     navigation: {

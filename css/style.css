@@ -418,6 +418,7 @@ hr.sectionWall {
 
 .project-pagination {
     margin-top: 20px;
+    margin-bottom: 10px;
     position: relative;
 }
 
@@ -427,6 +428,92 @@ hr.sectionWall {
     margin-left: -12px;
     margin-right: -12px;
 }
+
+
+
+
+
+
+
+.rq{
+    color: red;
+}
+form{
+    padding: 16px;
+    background-image: url('../res/bgToForm.jpg');
+    width: 24vw;
+    margin: auto;
+    display: flex;
+    text-align: left;
+    border-radius: 8px;
+    gap: 2px;
+    flex-direction: column;
+}
+
+form label{
+    font-size: 1.5em;
+    margin-bottom: 4px;
+}
+
+form input, form textarea{
+    resize: none;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: rgb(19, 19, 19);
+    margin-bottom: 6px;
+}
+
+form button{
+    padding: 6px 12px 8px 12px;
+    border: 0.01px solid rgb(156, 156, 156);
+    border-radius: 6px;
+    background-color: rgb(19, 19, 19);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

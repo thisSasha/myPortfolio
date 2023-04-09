@@ -40,9 +40,14 @@
     .header__info {
         text-align: center;
     }
+    .scills__cards{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
     .scills__card{
         width: 80vw;
         height: 60vw;
+        grid-column: 1/1;
     }
     .header__elements {
         flex-direction: column-reverse;
@@ -102,6 +107,10 @@
 
     .nav__gamburger {
         display: block;
+    }
+    form{
+        width: 90vw;
+        font-size: 2em;
     }
 }
 
