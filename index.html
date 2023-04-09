@@ -3,6 +3,7 @@
 
 <head>
     <link rel='stylesheet' href='./css/zero.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel='stylesheet' href='./css/style.css'>
     <link rel="stylesheet" href="./css/media.css">
     <meta charset='UTF-8'>
@@ -57,7 +58,9 @@
                 <div class="info">
                     <h2>Обо мне</h2>
                     <p class="text">Меня зовут Саша. Я программист. Мне <span id="age"></span> лет. Живу в частном доме.
-                        Люблю бегать и кататься на велосипеде. На удивление люблю читать книги. Начал заниматься программированием просто потому, что любил компьютеры. Занимался простыми вещами. Но потом я увидел компьютерный код. С того момента я изучаю создание сайтов.</p>
+                        Люблю бегать и кататься на велосипеде. На удивление люблю читать книги. Начал заниматься
+                        программированием просто потому, что любил компьютеры. Занимался простыми вещами. Но потом я
+                        увидел компьютерный код. С того момента я изучаю создание сайтов.</p>
                 </div>
             </div>
         </div>
@@ -65,58 +68,59 @@
     <hr class="sectionWall">
     <section class="scills">
         <div class="scills__container">
-            <div class="scills__elements">
-                <div class="info">
-                    <h2>Мои навыки</h2>
-                    <div class="scills__cards">
-                        <div class="scills__card">
-                            <h3>HTML</h3>
-                            <p class="scills__text">HTML - это язык, который позволяет создавать веб-страницы. Если ты
-                                знаешь HTML, то можешь оформить страницу изображениями, текстом, ссылками и другим
-                                содержимым. HTML помогает структурировать эти элементы, чтобы страница выглядела красиво
-                                и была удобной для использования.</p>
-                            <button class="scills__button"> <a href="">Wiki</a> </button>
-                        </div>
-                        <div class="scills__card">
-                            <h3>CSS</h3>
-                            <p class="scills__text">CSS - это язык, который используется для управления тем, как
-                                выглядит веб-страница. С его помощью можно задавать цвета фона, шрифты, размеры текста,
-                                расположение элементов на странице и т.д. То есть, если HTML определяет структуру
-                                страницы, то CSS описывает ее внешний вид и красоту.</p>
-                            <button class="scills__button"> <a href="">Wiki</a> </button>
-                        </div>
-                        <div class="scills__card scills__card_red">
-                            <h3>Плагины для js</h3>
-                            <p class="scills__text">Я, как программист пытаюсь облегчить жизнь себе и другим
-                                программистам. У меня в разработке большой пакет плагинов. Некоторые из них в общем
-                                доступе. Вот некоторые из плагинов: gameConstructor, valueConstructor, MMath и много
-                                чего другого. Подключить это всё довольно сложно и я планирую поместить это в 1 файл:
-                                simple.js</p>
-                            <button class="scills__button scills__button_red"> <a href="">Подробнее</a> </button>
-                        </div>
-                        <div class="scills__card">
-                            <h3>JavaScript</h3>
-                            <p class="scills__text">JavaScript – это язык программирования, который широко используется
-                                для создания веб-страниц с интерактивными элементами, такими как анимация, обработчики
-                                событий и многое другое. JavaScript позволяет добавлять функциональность на страницу,
-                                которая не может быть достигнута только с помощью HTML и CSS.</p>
-                            <button class="scills__button"> <a href="">Wiki</a> </button>
-                        </div>
-                        <div class="scills__card">
-                            <h3>Figma</h3>
-                            <p class="scills__text">Figma - это онлайн-инструмент для создания макетов и прототипов веб-
-                                и мобильных приложений. Он позволяет дизайнерам создавать и редактировать макеты в
-                                режиме реального времени совместно с другими членами команды, что ускоряет процесс
-                                работы и улучшает коммуникацию. Когда макет готов, его можно экспортировать в различные форматы, включая PNG, JPEG и
-                                SVG. Но также есть возможность экспортировать HTML-код для веб-вёрстки.</p>
-                            <button class="scills__button"> <a href="">Wiki</a> </button>
-                        </div>
-                        <div class="scills__card">
-                            <h3>GitHub</h3>
-                            <p class="scills__text">GitHub - это сервис для хранения, управления и совместной работы над проектами с использованием системы контроля версий Git. На GitHub можно создавать репозитории (хранилища файлов) и делиться ими с другими людьми, делать изменения в файлы, отслеживать изменения и комментировать их. Это позволяет разработчикам работать над проектами в команде, а также легко отслеживать изменения и версии проекта. </p>
-                            <button class="scills__button"> <a href="">Wiki</a> </button>
-                        </div>
-                    </div>
+            <h2>Мои навыки</h2>
+            <div class="scills__cards">
+                <div class="scills__card">
+                    <h3>HTML</h3>
+                    <p class="scills__text">HTML - это язык, который позволяет создавать веб-страницы. Если ты
+                        знаешь HTML, то можешь оформить страницу изображениями, текстом, ссылками и другим
+                        содержимым. HTML помогает структурировать эти элементы, чтобы страница выглядела красиво
+                        и была удобной для использования.</p>
+                    <button class="scills__button"> <a href="">Wiki</a> </button>
+                </div>
+                <div class="scills__card">
+                    <h3>CSS</h3>
+                    <p class="scills__text">CSS - это язык, который используется для управления тем, как
+                        выглядит веб-страница. С его помощью можно задавать цвета фона, шрифты, размеры текста,
+                        расположение элементов на странице и т.д. То есть, если HTML определяет структуру
+                        страницы, то CSS описывает ее внешний вид и красоту.</p>
+                    <button class="scills__button"> <a href="">Wiki</a> </button>
+                </div>
+                <div class="scills__card scills__card_red">
+                    <h3>Плагины для js</h3>
+                    <p class="scills__text">Я, как программист пытаюсь облегчить жизнь себе и другим
+                        программистам. У меня в разработке большой пакет плагинов. Некоторые из них в общем
+                        доступе. Вот некоторые из плагинов: gameConstructor, valueConstructor, MMath и много
+                        чего другого. Подключить это всё довольно сложно и я планирую поместить это в 1 файл:
+                        simple.js</p>
+                    <button class="scills__button scills__button_red"> <a href="">Подробнее</a> </button>
+                </div>
+                <div class="scills__card">
+                    <h3>JavaScript</h3>
+                    <p class="scills__text">JavaScript – это язык программирования, который широко используется
+                        для создания веб-страниц с интерактивными элементами, такими как анимация, обработчики
+                        событий и многое другое. JavaScript позволяет добавлять функциональность на страницу,
+                        которая не может быть достигнута только с помощью HTML и CSS.</p>
+                    <button class="scills__button"> <a href="">Wiki</a> </button>
+                </div>
+                <div class="scills__card">
+                    <h3>Figma</h3>
+                    <p class="scills__text">Figma - это онлайн-инструмент для создания макетов и прототипов веб-
+                        и мобильных приложений. Он позволяет дизайнерам создавать и редактировать макеты в
+                        режиме реального времени совместно с другими членами команды, что ускоряет процесс
+                        работы и улучшает коммуникацию. Когда макет готов, его можно экспортировать в различные
+                        форматы, включая PNG, JPEG и
+                        SVG. Но также есть возможность экспортировать HTML-код для веб-вёрстки.</p>
+                    <button class="scills__button"> <a href="">Wiki</a> </button>
+                </div>
+                <div class="scills__card">
+                    <h3>GitHub</h3>
+                    <p class="scills__text">GitHub - это сервис для хранения, управления и совместной работы над
+                        проектами с использованием системы контроля версий Git. На GitHub можно создавать
+                        репозитории (хранилища файлов) и делиться ими с другими людьми, делать изменения в
+                        файлы, отслеживать изменения и комментировать их. Это позволяет разработчикам работать
+                        над проектами в команде, а также легко отслеживать изменения и версии проекта. </p>
+                    <button class="scills__button"> <a href="">Wiki</a> </button>
                 </div>
             </div>
         </div>
@@ -127,6 +131,81 @@
             <div class="projects__elements">
                 <div class="info">
                     <h2>Мои проекты</h2>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide project-item">
+                                <img src="./res/randRace.png" alt="" class="project-item__foto">
+                                <div class="project-item__info">
+                                    <h4>Рандомные гонки</h4>
+                                    <p>
+                                        Это простая игра - ты ставишь ставку на машину, и если она победила, ты получаешь очки. На её создание ушло много времени - было много багов, да и работы немало.
+                                    </p>
+                                    <a href="https://is.gd/randRace">Ссылка на сайт</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide project-item">
+                                <img src="./res/regis.png" alt="" class="project-item__foto">
+                                <div class="project-item__info">
+                                    <h4>Поле для регистрации</h4>
+                                    <p>
+                                        Не то, чтобы сложный проект, но на самом деле это очень полезный опыт.
+                                    </p>
+                                    <a href="https://thissasha.github.io/regis/">Ссылка на сайт</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide project-item">
+                                <img src="./res/opros.png" alt="" class="project-item__foto">
+                                <div class="project-item__info">
+                                    <h4>Опрос</h4>
+                                    <p>
+                                        Это опрос, как нужно питаться. Я вижу ответы и статистику. Таким же способом можно делать формы заказов.
+                                    </p>
+                                    <a href="https://thissasha.github.io/opros/">Ссылка на сайт</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide project-item">
+                                <img src="./res/randRace.png" alt="" class="project-item__foto">
+                                <div class="project-item__info">
+                                    <h4>Рандомные гонки</h4>
+                                    <p>
+                                        Это простая игра - ты ставишь ставку на машину, и если она победила, ты получаешь очки. На её создание ушло много времени - было много багов, да и работы немало.
+                                    </p>
+                                    <a href="https://is.gd/randRace">Ссылка на сайт</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide project-item">
+                                <img src="./res/regis.png" alt="" class="project-item__foto">
+                                <div class="project-item__info">
+                                    <h4>Поле для регистрации</h4>
+                                    <p>
+                                        Не то, чтобы сложный проект, но на самом деле это очень полезный опыт.
+                                    </p>
+                                    <a href="https://thissasha.github.io/regis/">Ссылка на сайт</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide project-item">
+                                <img src="./res/opros.png" alt="" class="project-item__foto">
+                                <div class="project-item__info">
+                                    <h4>Опрос</h4>
+                                    <p>
+                                        Это опрос, как нужно питаться. Я вижу ответы и статистику. Таким же способом можно делать формы заказов.
+                                    </p>
+                                    <a href="https://thissasha.github.io/opros/">Ссылка на сайт</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination project-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev project-button-prev"></div>
+                        <div class="swiper-button-next project-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar project-scrollbar"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -189,6 +268,7 @@
         </div>
     </section>
     <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2c09f7fb88.js" crossorigin="anonymous"></script>
     <script src='./js/mainScript.js'></script>
 </body>

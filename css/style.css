@@ -18,10 +18,11 @@ section {
 }
 
 body {
+    --swiper-scrollbar-bg-color: #fd42e1;
     overflow-x: hidden;
-    --swiper-pagination-bullet-inactive-color: white;
-    --swiper-pagination-color: rgb(89, 89, 237);
-    --swiper-theme-color: rgb(89, 89, 237);
+    --swiper-pagination-bullet-inactive-color: rgb(255, 255, 255);
+    --swiper-pagination-color: #fd42e1;
+    --swiper-theme-color: #fd42e1;
     background-color: rgb(15, 15, 15);
     color: white;
 }
@@ -47,33 +48,8 @@ h3 {
 
 
 
-
-
-.main {
-    padding: 10px;
-    margin-top: 5%;
-    background-color: white;
-    color: black;
-}
-
-.swiper {
-    color: white;
-    width: 70vw;
-    height: 30vh;
-}
-
-.swiper-slide img {
-    border: 0.4vw solid white;
-    position: relative;
-    top: 20vh;
-    width: 12.63vw;
-    height: 17vh;
-}
-
-
-
-
 nav {
+    z-index: 299;
     position: fixed;
     width: 100vw;
     padding: 10px 0;
@@ -335,6 +311,10 @@ hr.sectionWall {
     justify-content: center;
 }
 
+.scills__container h2 {
+    text-align: center;
+}
+
 .scills__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -349,7 +329,6 @@ hr.sectionWall {
     padding: 24px;
     border-radius: 16px;
     transition: 600ms;
-    width: 30vw;
     display: flex;
     text-align: justify;
     flex-direction: column;
@@ -357,7 +336,7 @@ hr.sectionWall {
     align-items: center;
 }
 
-.scills__card:nth-child(3){
+.scills__card:nth-child(3) {
     grid-column: 2/3;
 }
 
@@ -377,6 +356,8 @@ hr.sectionWall {
 
 .scills__container {
     padding: 0 20px;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .scills__button {
@@ -398,10 +379,54 @@ hr.sectionWall {
 
 
 
+.swiper {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
 
+.project-item {
+    padding: 10px;
+    height: max-content;
+    background: linear-gradient(to bottom left, #a200ff, #eac7ff);
+}
 
+.project-item__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
+.project-item__info p {
+    color: black;
+    font-size: 1.2em;
+}
 
+.project-item__info a {
+    color: rgb(0, 0, 193);
+    font-size: 1.2em;
+}
+
+.project-item__info h4 {
+    color: black;
+    font-size: 2.1em;
+}
+
+.project-item__foto {
+    width: 100%;
+}
+
+.project-pagination {
+    margin-top: 20px;
+    position: relative;
+}
+
+.project-button-next,
+.project-button-prev {
+    --swiper-navigation-size: 60px;
+    margin-left: -12px;
+    margin-right: -12px;
+}
 
 
 

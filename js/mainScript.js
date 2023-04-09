@@ -1,6 +1,6 @@
 document.querySelectorAll('a[href^="#N"]').forEach(link => {
     link.onclick = function (e) {
-        if(document.querySelector('.nav__links').classList.contains('nav__links_active')){
+        if (document.querySelector('.nav__links').classList.contains('nav__links_active')) {
             document.querySelector('.nav__links').classList.toggle('nav__links_active');
             document.querySelector('.nav__gamburger').classList.toggle('nav__gamburger_active');
         };
@@ -18,14 +18,38 @@ document.querySelectorAll('a[href^="#N"]').forEach(link => {
     };
 });
 
-document.querySelector('.nav__gamburger').onclick = function() {
+document.querySelector('.nav__gamburger').onclick = function () {
     document.querySelector('.nav__links').classList.toggle('nav__links_active');
     document.querySelector('.nav__gamburger').classList.toggle('nav__gamburger_active');
 };
 
 
-let exp = new Date().getFullYear()-2021;
+let exp = new Date().getFullYear() - 2021;
 // document.querySelector('#exp').innerHTML = exp;
 
-let age = new Date().getFullYear()-2012;
+let age = new Date().getFullYear() - 2012;
 document.querySelector('#age').innerHTML = age;
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    effect: 'coverflow',
+    slidesPerView: 3,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
