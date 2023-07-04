@@ -29,10 +29,22 @@ let exp = new Date().getFullYear() - 2021;
 
 let age = new Date().getFullYear() - 2012;
 document.querySelector('#age').innerHTML = age;
+
+
+
+
+
+
+
+
+
+
 let slides = 3;
-if(window.matchMedia('(max-width: 768px)')){
+
+if (window.innerWidth < 768) {
     slides = 1;
 };
+
 
 let swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -44,7 +56,16 @@ let swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
     },
     effect: 'coverflow',
-    slidesPerView: slides,
+
+    slidesPerView: 'auto',
+
+    breakpoints: {
+        // when window width is >= 320px
+        1000: {
+            slidesPerView: 3,
+            
+        },
+    },
 
     // Navigation arrows
     navigation: {
