@@ -63,7 +63,7 @@ let swiper = new Swiper('.swiper', {
         // when window width is >= 320px
         1000: {
             slidesPerView: 3,
-            
+
         },
     },
 
@@ -78,3 +78,10 @@ let swiper = new Swiper('.swiper', {
         el: '.swiper-scrollbar',
     },
 });
+
+
+function myMedia() {
+    document.querySelector('.about__h').style.top = ((document.querySelector('.about__foto').clientHeight / 2) - (document.querySelector('.about__h').clientHeight / 2)).toString() + 'px';
+};
+
+myMedia();

@@ -221,6 +221,11 @@ header p {
 .header__foto {
     max-width: 420.22px;
     width: 36em;
+    height: 36em;
+    background: url('../res/header__foto.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
 }
 
 
