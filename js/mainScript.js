@@ -32,6 +32,8 @@ document.querySelector('#exp').innerHTML = exp;
 let age = new Date().getFullYear() - 2012;
 document.querySelector('#age').innerHTML = age;
 
+let now = new Date().getFullYear();
+document.querySelector('#now').innerHTML = now;
 
 
 
@@ -41,11 +43,12 @@ document.querySelector('#age').innerHTML = age;
 
 
 
-let slides = 3;
 
-if (window.innerWidth < 768) {
-    slides = 1;
-};
+// let slides = 3;
+
+// if (window.innerWidth < 768) {
+//     slides = 1;
+// };
 
 
 
@@ -91,7 +94,7 @@ let works = [
     {
         name: 'Лендинг "Финансы и налоги"',
         link: 'https://fin-nal.by',
-        description: '',
+        description: 'Сайт компании "Финансы и налоги"',
     },
     {
         name: 'Рандомные гонки',
@@ -101,40 +104,84 @@ let works = [
 ];
 
 works.forEach(el => {
-    let work = document.createElement('div');
-    work.className = 'swiper-slide project-item';
-    work.innerHTML = `<h4 title="${el.description}">${el.name}</h4>`;
-    work.onclick = function () {
-        setTimeout(() => {window.open(el.link)}, 1000);
+    document.querySelector('.projects__list').innerHTML += `
+<a href='${el.link}'><div class="projects__item">
+    <h3>${el.name}</h3>
+    <p class="scills__text">${el.description}</p>
+</div></a>
+`;
+
+});
+
+
+
+document.querySelector('.arrows__right').onclick = function () {
+    let list = document.querySelector('.projects__list');
+    list.scrollTo({
+        left: list.scrollLeft + document.querySelector('.projects__item').clientWidth + 20,
+        behavior: 'smooth'
+    })
+};
+
+document.querySelector('.arrows__left').onclick = function () {
+    let list = document.querySelector('.projects__list');
+    list.scrollTo({
+        left: list.scrollLeft - (document.querySelector('.projects__item').clientWidth + 20),
+        behavior: 'smooth'
+    })
+};
+
+
+
+
+document.querySelectorAll('.form__item input').forEach(el => {
+    el.addEventListener('focus', () => {
+        el.parentNode.classList.add('input_focus')
+    });
+    el.onblur = () => {
+        if (!el.value) {
+            el.parentNode.classList.remove('input_focus')
+        };
     };
-    work.title = el.description;
-    document.querySelector('.swiper-wrapper').appendChild(work);
+});
+
+
+document.querySelectorAll('.form__item textarea').forEach(el => {
+    el.addEventListener('focus', () => {
+        el.parentNode.classList.add('input_focus')
+    });
+    el.onblur = function (e) {
+        if (!el.value) {
+            el.parentNode.classList.remove('input_focus')
+        };
+    };
 });
 
 
 
 
-let swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
+// let swiper = new Swiper('.swiper', {
+//     // Optional parameters
+//     direction: 'horizontal',
+//     loop: true,
 
-    slidesPerView: 3,
-    spaceBetween: '15%',
+//     // If we need pagination
+//     pagination: {
+//         el: '.swiper-pagination',
+//     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+//     slidesPerView: 3,
+//     spaceBetween: '15%',
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
+//     // Navigation arrows
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+
+//     // And if we need scrollbar
+//     scrollbar: {
+//         el: '.swiper-scrollbar',
+//     },
+// });

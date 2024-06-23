@@ -51,22 +51,20 @@
                         <p>Всё верно! Вы не ослышались!</p>
                         <a href="#N.about">Подробнее</a>
                 </div>
-                <div class="header__foto"></div>
+                <img class="header__foto" src="./res/CircleLogo.png" />
             </div>
         </div>
     </header>
     <section class="about">
         <div class="container">
+            <h2 class="about__h">Обо мне</h2>
             <div class="about__elements">
-                <h2 class="about__h">Обо мне</h2>
-                <div class="info">
-                    <div class="foto about__foto"></div>
-                    <p class="text">Меня зовут Саша. Я программист. Мне <span id="age"></span> лет. Живу в частном доме.
-                        Люблю бегать и кататься на велосипеде. На удивление люблю читать книги. Начал заниматься
-                        программированием просто потому, что любил компьютеры. Занимался простыми вещами. Но потом я
-                        увидел компьютерный код. С того момента я изучаю создание сайтов. Опыт работы: <span
-                            id="exp"></span>.</p>
-                </div>
+                <img class="foto about__foto" src="./res/CircleLogo.png" />
+                <p class="text">Меня зовут Саша. Я программист. Мне <span id="age"></span> лет. Живу в частном доме.
+                    Люблю бегать и кататься на велосипеде. На удивление люблю читать книги. Начал заниматься
+                    программированием просто потому, что любил компьютеры. Занимался простыми вещами. Но потом я
+                    увидел компьютерный код. С того момента я изучаю создание сайтов. Опыт работы: <span
+                        id="exp"></span>.</p>
             </div>
         </div>
     </section>
@@ -82,9 +80,8 @@
                 </div>
                 <div class="scills__card">
                     <h3>JavaScript</h3>
-                    <p class="scills__text">JavaScript - язык программирования для создания интерактивности на сайтах,
-                        включая отправку заявок, навигацию и логику игр. Я разрабатываю плагины для упрощения жизни
-                        программистов на этом ЯП.</p>
+                    <p class="scills__text">JavaScript - язык для интерактивности на сайтах, например заявки, навигацию,
+                        игры и разные плагины для программистов.</p>
                 </div>
                 <div class="scills__card">
                     <h3>Figma</h3>
@@ -101,85 +98,79 @@
     </section>
     <hr class="sectionWall">
     <section class="projects">
-        <h2>Мои проекты</h2>
-        <div class="projects__container">
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination project-pagination"></div>
-    
-                <!-- If we need navigation buttons -->
-    
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar project-scrollbar"></div>
+        <div class="container">
+            <h2>Мои проекты</h2>
+            <div class="projects__list">
+
+            </div>
+            <div class="projects__arrows">
+                <button class="arrows__left"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="arrows__right"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
-        <div class="swiper-button-prev project-button-prev"></div>
-        <div class="swiper-button-next project-button-next"></div>
     </section>
     <hr>
     <section class="contacts">
         <div class="container">
-            <div class=".contacs__elements">
-                <div class="info">
-                    <h2>Хочу сайт! Либо задать вопрос</h2>
-                    <h3>Напишите в любую соц. сеть</h3>
-                    <ul class="text">
-                        <li>
-                            <a href="https://wa.me/375336168468">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                Whatsapp
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://vk.com/thisDevSasha">
-                                <i class="fa-brands fa-vk"></i>
-                                Vk
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/thisDevSasha">
-                                <i class="fa-brands fa-telegram"></i>
-                                Telegram
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.upwork.com/freelancers/~01aa125af87a4333e0">
-                                <img src="./res/upwork.png" alt="" class="upwork icon">
-                                Upwork
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://kwork.ru/user/thisdevsasha ">
-                                <img src="./res/kwork.jpg" alt="" class="kwork icon">
-                                Kwork
-                            </a>
-                        </li>
-                    </ul>
-                    <h3>Либо заполните форму</h3>
-                    <form action="">
-                        <label for="name"><span class="rq">*</span>Ваше имя:</label>
-                        <input type="text" placeholder="Марк" name="" required id="name">
-
-                        <label for="phone"><span class="rq">*</span>Ваш номер телефона:</label>
-                        <input type="text" id="phone" placeholder="+13021322413" name="">
-
-                        <label for="message"><span class="rq">*</span>Сообщение:</label>
-                        <textarea placeholder="sddsa" name="" id="message" cols="30"
-                            rows="10">Здравствуйте, не могли бы вы создать сайт-визитку?</textarea>
-
+            <div class="contacts__info">
+                <h2>Заказать сайт</h2>
+                <div class="social-links">
+                    <h3>Оставьте заявку. Я свяжусь с вами в течении суток</h3>
+                    <form
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScFo-s6od6IXDvIWxKxoOJg1vo2fjqcBro8sMRZ9WCxKimN2A/formResponse"
+                        class="contact-form">
+                        <div class="form__item">
+                            <label for="name">Ваше имя:</label>
+                            <input type="text" name="entry.804637642" required id="name">
+                        </div>
+                        <div class="form__item">
+                            <label for="phone">Ваш номер телефона:</label>
+                            <input type="text" id="phone" name="entry.1317154783">
+                        </div>
+                        <div class="form__item form_withTextarea">
+                            <label for="message">Сообщение:</label>
+                            <textarea name="entry.524184572" id="message" cols="30" rows="10"></textarea>
+                        </div>
                         <button type="submit">Отправить</button>
                     </form>
+                    <p class="contacts__text">Либо напишите в любую соц. сеть</p>
                 </div>
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="#Nheader"><img src="./res/Logo.svg" alt="Footer Logo"></a>
+                </div>
+                <div class="footer__links">
+                    <ul>
+                        <li><a href="#Nheader">Главная</a></li>
+                        <li><a href="#N.about">О нас</a></li>
+                        <li><a href="#N.scills">Навыки</a></li>
+                        <li><a href="#N.projects">Проекты</a></li>
+                        <li><a href="#N.contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__social">
+                    <a href="https://wa.me/375336168468" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://vk.com/thisDevSasha" target="_blank"><i class="fab fa-vk"></i></a>
+                    <a href="https://t.me/thisDevSasha" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://kwork.ru/user/thisdevsasha"><img src="./res/kwork.svg" alt=""
+                            class="kwork icon"></a>
+
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; <span id="now"></span> Фрилансер Александр. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2c09f7fb88.js" crossorigin="anonymous"></script>
     <script src='./js/mainScript.js'></script>
+
 </body>
 
 </html>

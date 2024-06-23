@@ -7,6 +7,18 @@
 @media (max-width:768px) {
     body {
         font-size: calc(100vw/60);
+        width: 100vw;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .header__foto {
+        width: 50vw;
+    }
+
+
+    * {
+        max-width: 100vw;
     }
 
     h1,
@@ -52,7 +64,13 @@
 
     .scills__cards {
         width: 100vw;
+        margin: 0;
+        left: 0;
         flex-direction: column;
+    }
+
+    .scills__container {
+        padding: 0;
     }
 
     .scills__card:nth-child(3) {
@@ -61,8 +79,9 @@
 
     .scills__card {
         margin: auto;
+        box-shadow: 0 0px 4px rgba(255, 255, 255, 0.3);
         max-height: max-content;
-        font-size: 12px;
+        font-size: 14px;
         width: 80vw;
         height: max-content;
     }
@@ -88,13 +107,17 @@
         justify-content: center;
     }
 
-    .about__elements {
-        padding-top: 100px;
+    .about .text {
+        width: 90vw;
     }
 
-    .about h2 {
-        position: absolute;
-        right: 14%;
+    .about__foto {
+        width: 50vw;
+        position: relative;
+    }
+
+    .about__elements {
+        flex-direction: column;
     }
 
     .contacts ul {
@@ -104,15 +127,6 @@
 
     .about .container {
         position: relative;
-    }
-
-    section .foto {
-        position: absolute;
-        top: 0;
-        width: 18vw;
-        height: 18vw;
-        left: 14%;
-
     }
 
     hr.sectionWall {
@@ -175,10 +189,13 @@
         font-size: 20px;
     }
 
-    .project-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .projects__item {
+        font-size: 1.5em;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        gap: 16px;
     }
 }
 
