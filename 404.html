@@ -2,6 +2,20 @@
 <html lang='ru'>
 
 <head>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        iframe {
+            border-radius: 16px;
+        }
+        button {
+            padding: 8px;
+            border-radius: 12px;
+            color: black;
+        }
+    </style>
     <link rel='stylesheet' href='./css/zero.css'>
     <link rel='stylesheet' href='./css/style.css'>
     <meta charset='UTF-8'>
@@ -11,10 +25,21 @@
 </head>
 
 <body>
-    <script type="module">
-        import { CColor, sColor } from 'https://thissasha.github.io/simpleJs/ssimple/ssimple.js';
-        let color = new sColor('#ffffff');
-        console.log(color);
+    <h1 style="text-align: center;">404</h1>
+    <p>Я пока не добавлял такой странички на сайт, но можешь поиграть в рандом игру со scratch</p>
+    <br><br>
+    <iframe src="" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no"
+        allowfullscreen></iframe>'
+    <br>
+    <br>
+    <button style="color: black;">Перезапуск</button>
+    <button><a href="../" style="color: black;">Главная</a></button>
+    <script>
+        document.querySelector('iframe').src = 'https://scratch.mit.edu/projects/' + Math.round(Math.random() * 100000 + 1000000).toString() + '/embed';
+
+        document.querySelector('button').onclick = function () {
+            document.querySelector('iframe').src = 'https://scratch.mit.edu/projects/' + Math.round(Math.random() * 100000 + 1000000).toString() + '/embed';
+        };
     </script>
 </body>
 

@@ -13,6 +13,7 @@
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <script>
         function onSignIn(googleUser) {
+            alert(googleUser)
             var profile = googleUser.getBasicProfile();
             if (profile.getEmail() === "trhfjfn@gmail.com") {
                 var input = document.createElement('input');
