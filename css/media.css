@@ -180,13 +180,35 @@
         font-size: 20px;
     }
 
+    .scills__card h3 {
+        width: 160px;
+        height: 160px;
+        font-size: 20px;
+    }
+
+    .scills__card {
+        font-size: 1.6em;
+    }
+
+    .scills__text {
+        width: 70vw;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .nav__gamburger {
         display: block;
     }
 
     form {
         width: 90vw;
-        font-size: 20px;
+        font-size: 12px;
+        margin: 0;
     }
 
     .projects__item {
