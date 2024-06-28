@@ -2,6 +2,86 @@
 <html lang='ru'>
 
 <head>
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+    <style>
+        .preloader {
+            /*фиксированное позиционирование*/
+            position: fixed;
+            /* координаты положения */
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            /* фоновый цвет элемента */
+            background: #111111;
+            /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+            z-index: 1001;
+        }
+
+        .preloader__row {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+            margin-top: -35px;
+            margin-left: -35px;
+            text-align: center;
+            animation: preloader-rotate 2s infinite linear;
+        }
+
+        .preloader__item {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            background-color: #6e33b7;
+            border-radius: 100%;
+            width: 35px;
+            height: 35px;
+            animation: preloader-bounce 2s infinite ease-in-out;
+        }
+
+        .preloader__item:last-child {
+            top: auto;
+            bottom: 0;
+            animation-delay: -1s;
+        }
+
+        @keyframes preloader-rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes preloader-bounce {
+
+            0%,
+            100% {
+                transform: scale(0);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        .loaded_hiding .preloader {
+            transition: 0.3s opacity;
+            opacity: 0;
+        }
+
+        .loaded .preloader {
+            display: none;
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -17,6 +97,12 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
     <nav>
         <div class="container">
             <div class="nav__elements">
@@ -55,21 +141,22 @@
             </div>
         </div>
     </header>
-    <section class="about">
+    <section class="about _scroll">
         <div class="container">
             <h2 class="about__h">Обо мне</h2>
             <div class="about__elements">
                 <img class="foto about__foto" src="./res/CircleLogo.png" />
                 <p class="text">Меня зовут Саша. Я программист. Мне <span id="age"></span> лет. Живу в частном доме.
                     Люблю бегать и кататься на велосипеде. На удивление люблю читать книги. Начал заниматься
-                    программированием просто потому, что любил компьютеры. Занимался простыми вещами. Но потом я
-                    увидел компьютерный код. С того момента я изучаю создание сайтов. Опыт работы: <span
-                        id="exp"></span>.</p>
+                    программированием просто потому, что любил компьютеры. Однажны мне показали веб-разработку, и теперь
+                    я сам занимаюсь этим. Опыт работы: <span id="exp"></span>. <br> <br>
+                    Также я развиваюсь в других сферах программирования, например могу написать простое
+                    приложение, сделать логотип или переустановить ОС.</p>
             </div>
         </div>
     </section>
     <hr class="sectionWall">
-    <section class="scills">
+    <section class="scills _scroll">
         <div class="scills__container">
             <h2>Мои навыки</h2>
             <div class="scills__cards">
@@ -97,7 +184,7 @@
         </div>
     </section>
     <hr class="sectionWall">
-    <section class="projects">
+    <section class="projects _scroll">
         <div class="container">
             <h2>Мои проекты</h2>
             <div class="projects__list">
@@ -152,14 +239,6 @@
                         <li><a href="#N.projects">Проекты</a></li>
                         <li><a href="#N.contacts">Контакты</a></li>
                     </ul>
-                </div>
-                <div class="footer__social">
-                    <a href="https://wa.me/375336168468" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://vk.com/thisDevSasha" target="_blank"><i class="fab fa-vk"></i></a>
-                    <a href="https://t.me/thisDevSasha" target="_blank"><i class="fab fa-telegram"></i></a>
-                    <a href="https://kwork.ru/user/thisdevsasha"><img src="./res/kwork.svg" alt=""
-                            class="kwork icon"></a>
-
                 </div>
             </div>
             <div class="footer__copyright">

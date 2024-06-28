@@ -18,6 +18,7 @@ document.querySelectorAll('a[href^="#N"]').forEach(link => {
     };
 });
 
+
 document.querySelector('.nav__gamburger').onclick = function () {
     document.querySelector('.nav__social').classList.toggle('nav__social_active');
     document.querySelector('.nav__links').classList.toggle('nav__links_active');
@@ -25,7 +26,10 @@ document.querySelector('.nav__gamburger').onclick = function () {
 };
 
 
-let exp = new Date().getFullYear() - 2021;
+
+
+
+let exp = new Date().getFullYear() - 2021 + ((new Date().getMonth() - 5) > 0 ? '.5' : '');
 exp += exp < 4 ? ' года' : ' лет';
 document.querySelector('#exp').innerHTML = exp;
 
@@ -40,24 +44,22 @@ document.querySelector('#now').innerHTML = now;
 
 
 
+document.querySelector('.about__h').style.top = ((document.querySelector('.about__foto').clientHeight / 2) - (document.querySelector('.about__h').clientHeight / 2)).toString() + 'px';
 
 
 
 
-// let slides = 3;
-
-// if (window.innerWidth < 768) {
-//     slides = 1;
-// };
 
 
 
 
-function myMedia() {
-    document.querySelector('.about__h').style.top = ((document.querySelector('.about__foto').clientHeight / 2) - (document.querySelector('.about__h').clientHeight / 2)).toString() + 'px';
-};
 
-myMedia();
+
+
+
+
+
+
 
 
 
@@ -69,7 +71,7 @@ let works = [
     {
         name: 'Список задач',
         link: 'https://thissasha.github.io/toDoList',
-        description: 'REACT project. Темы, минимализм, функции.'
+        description: 'React pet-project. Темы, минимализм, функции.'
     },
     {
         name: 'Опрос',
@@ -80,11 +82,6 @@ let works = [
         name: 'Форма заказов',
         link: 'https://thissasha.github.io/form/',
         description: 'Турецкая компания по готовке и доставке еды заказала эту форму за 25$.',
-    },
-    {
-        name: 'Шаблоны JavaScript',
-        link: 'https://thissasha.github.io/shablons/',
-        description: 'Мой пет-проект с шаблонами для программистов. Документация в разработке.',
     },
     {
         name: 'Угадай число',
@@ -110,31 +107,77 @@ works.forEach(el => {
     <p class="scills__text">${el.description}</p>
 </div></a>
 `;
-
 });
 
 
 
-document.querySelector('.arrows__right').onclick = function () {
-    let list = document.querySelector('.projects__list');
-    list.scrollTo({
-        left: list.scrollLeft + document.querySelector('.projects__item').clientWidth + 20,
-        behavior: 'smooth'
-    })
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelector('.arrows__right').onclick = arrows;
+document.querySelector('.arrows__left').onclick = arrows;
+
+
+document.onscroll = function () {
+    if (window.scrollY > 600) {
+        document.querySelector('.about').classList.remove('_noscroll');
+    };
+
+    if (window.scrollY > 1150) {
+        document.querySelector('.scills').classList.remove('_noscroll');
+    };
+
+    if (window.scrollY > 1700) {
+        document.querySelector('.projects').classList.remove('_noscroll');
+    };
 };
 
-document.querySelector('.arrows__left').onclick = function () {
+
+document.onscroll();
+
+
+
+
+
+
+
+
+
+
+
+
+
+function arrows(e) {
     let list = document.querySelector('.projects__list');
+    let lft = document.querySelector('.projects__item').clientWidth + 20;
+    if (e.target.className.includes('left')) {
+        lft = -lft;
+    };
     list.scrollTo({
-        left: list.scrollLeft - (document.querySelector('.projects__item').clientWidth + 20),
+        left: list.scrollLeft + lft,
         behavior: 'smooth'
-    })
+    });
 };
 
 
 
 
-document.querySelectorAll('.form__item input').forEach(el => {
+
+
+
+
+
+
+document.querySelectorAll('.form__item input, .form__item textarea').forEach(el => {
     el.addEventListener('focus', () => {
         el.parentNode.classList.add('input_focus')
     });
@@ -144,44 +187,3 @@ document.querySelectorAll('.form__item input').forEach(el => {
         };
     };
 });
-
-
-document.querySelectorAll('.form__item textarea').forEach(el => {
-    el.addEventListener('focus', () => {
-        el.parentNode.classList.add('input_focus')
-    });
-    el.onblur = function (e) {
-        if (!el.value) {
-            el.parentNode.classList.remove('input_focus')
-        };
-    };
-});
-
-
-
-
-
-// let swiper = new Swiper('.swiper', {
-//     // Optional parameters
-//     direction: 'horizontal',
-//     loop: true,
-
-//     // If we need pagination
-//     pagination: {
-//         el: '.swiper-pagination',
-//     },
-
-//     slidesPerView: 3,
-//     spaceBetween: '15%',
-
-//     // Navigation arrows
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-
-//     // And if we need scrollbar
-//     scrollbar: {
-//         el: '.swiper-scrollbar',
-//     },
-// });
