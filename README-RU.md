@@ -1,6 +1,6 @@
 # Сайт TDS
 
-Портфолио веб-разработчика Саши, «thisDevSasha». Сайт на Github Pages: [Link](https://thisSasha.github.io/thisDevSashA)
+Портфолио веб-разработчика Саши, «thisDevSasha». Сайт на Github Pages: [Ссылка](https://thisSasha.github.io/myPortfolio)
 
 ### Если вам нужен сайт, пишите:
 - [Telegram](https://t.me/thisDevSasha)
