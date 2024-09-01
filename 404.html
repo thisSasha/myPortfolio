@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='ru'>
+<html lang="ru">
 
 <head>
     <style>
@@ -16,29 +16,29 @@
             color: black;
         }
     </style>
-    <link rel='stylesheet' href='./css/zero.css'>
-    <link rel='stylesheet' href='./css/style.css'>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="./css/zero.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
 </head>
 
 <body>
     <h1 style="text-align: center;">404</h1>
-    <p>Я пока не добавлял такой странички на сайт, но можешь поиграть в рандом игру со scratch:</p>
+    <p>Я пока не добавлял такой странички на сайт, но можешь поиграть в рандом игру со scratch</p>
     <br><br>
-    <iframe src="" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no"
-        allowfullscreen></iframe>'
+    <iframe allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no"
+        allowfullscreen></iframe>"
     <br>
     <br>
     <button style="color: black;">Перезапуск</button>
-    <button><a href="../" style="color: black;">Главная</a></button>
+    <button><a href="./index.html" style="color: black;">Главная</a></button>
     <script>
-        document.querySelector('iframe').src = 'https://scratch.mit.edu/projects/' + Math.round(Math.random() * 100000 + 1000000).toString() + '/embed';
+        document.querySelector("iframe").src = "https://scratch.mit.edu/projects/" + Math.round(Math.random() * 100000 + 1000000).toString() + "/embed";
 
-        document.querySelector('button').onclick = function () {
-            document.querySelector('iframe').src = 'https://scratch.mit.edu/projects/' + Math.round(Math.random() * 100000 + 1000000).toString() + '/embed';
+        document.querySelector("button").onclick = function () {
+            document.querySelector("iframe").src = "https://scratch.mit.edu/projects/" + Math.round(Math.random() * 100000 + 1000000).toString() + "/embed";
         };
     </script>
 </body>
